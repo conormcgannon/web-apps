@@ -1,0 +1,11 @@
+<h1>Companies!<h1>
+
+<% companies = Company.all %>
+<h2> There are <%= companies.count %> companies: <h2> <!--talk to companies table via company model-->
+
+
+<ul>
+  <% for company in companies %>  <!--starts a loop that runs through companies in the list-->
+    <li> <%= company["name"] %> </li>
+  <% end %>
+</ul>
